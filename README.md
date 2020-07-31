@@ -49,10 +49,12 @@
 
 ## Known Bugs
 
-| Bug : Message |  Situation  | Resolved (Y/N) |  Bug Resolution Strategy |
+| Location : Message |  Situation  | Resolved (Y/N) |  Bug Resolution Strategy |
 | ----------- | ----------- | ----------- | ----------- |
 | ".NETCoreApp,Version=v2.2.AssemblyAttributes.cs HairSalon\obj\Debug\netcoreapp2.2" : "Duplicate 'global::System.Runtime.Versioning.TargetFrameworkAttribute' attribute [HairSalon] csharp(CS0579) | Displayed when "dotnet build" and "dotnet watch run" commands are initiated. No apparent effect on program functionality. | Y | Add tag "<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>" to "<PropertyGroup>" within "<Project>" in HairSalon/HairSalon.csproj file. |
 | "Controllers\ClientsController.cs" : "'Client' does not contain a definition for 'Stylist' and no accessible extension method 'Stylist' accepting a first argument of type 'Client' could be found (are you missing a using directive or an assembly reference?)" | Build error on cmd "dotnet build" | Y | Add "public virtual Stylist Stylist { get; set; }" to Client class in HairSalon/Models/Client.cs file. |
+| "Controllers\ClientsController.cs" : "error CS1520: Method must have a return type" | Build error affecting display of "clients/index" view | Y | Correct public class "ClientsController", which had been misnamed 'HairSalonController'. |
+| "Models\Client.cs" : "error CS0246: The type or namespace name 'Styling' could not be found (are you missing a using directive or an assembly reference?)" | Build error preventing loading of "clients/index" view | Y | Rename public "PreferredStyling Styling" property to public "Styling PreferredStyling" and rename public enum "PreferredStyling" to "Styling" in HairSalon/Models/Client.cs file. |
 
 
 ## Support & Contact Details
