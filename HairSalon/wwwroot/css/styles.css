@@ -1,5 +1,5 @@
 body {
-  font-family: Courier, monospace;
+  font-family: Georgia;
 }
 
 footer {
@@ -12,7 +12,26 @@ footer {
   width: 100%
 }
 
+nav {
+  margin-bottom: 0.309em;
+  margin-left: 0.309em;
+  margin-top: 0.309em;
+}
+
+.btn-outline-danger {
+  border-color: maroon;
+}
+
 .jumbotron {
   background-color: maroon;
+  border-radius: 0%;
   color: white;
+}
+
+.jumbotron h1 {
+  font-size: 5em;
+}
+
+.jumbotron h2 {
+  font-size: 3.09em;
 }
