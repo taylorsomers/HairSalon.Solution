@@ -1,9 +1,18 @@
+body {
+  font-family: Courier, monospace;
+}
+
 footer {
-  background-color: steelblue;
+  background-color: maroon;
   bottom: 0em;
   color: white;
   font-size: 0.618em;
   position: fixed;
   text-align: center;
   width: 100%
+}
+
+.jumbotron {
+  background-color: maroon;
+  color: white;
 }
