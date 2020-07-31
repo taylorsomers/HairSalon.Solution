@@ -55,6 +55,7 @@
 | "Controllers\ClientsController.cs" : "'Client' does not contain a definition for 'Stylist' and no accessible extension method 'Stylist' accepting a first argument of type 'Client' could be found (are you missing a using directive or an assembly reference?)" | Build error on cmd "dotnet build" | Y | Add "public virtual Stylist Stylist { get; set; }" to Client class in HairSalon/Models/Client.cs file. |
 | "Controllers\ClientsController.cs" : "error CS1520: Method must have a return type" | Build error affecting display of "clients/index" view | Y | Correct public class "ClientsController", which had been misnamed 'HairSalonController'. |
 | "Models\Client.cs" : "error CS0246: The type or namespace name 'Styling' could not be found (are you missing a using directive or an assembly reference?)" | Build error preventing loading of "clients/index" view | Y | Rename public "PreferredStyling Styling" property to public "Styling PreferredStyling" and rename public enum "PreferredStyling" to "Styling" in HairSalon/Models/Client.cs file. |
+| "Models\Stylist.cs" : "error CS0246: The type or namespace name 'DisplayNameAttribute' could not be found (are you missing a using directive or an assembly reference?)" | Build error causing total failure of pages to render | Y | Add using directive "System.ComponentModel" to HairSalon/Models/Stylist.cs file. |
 
 
 ## Support & Contact Details
