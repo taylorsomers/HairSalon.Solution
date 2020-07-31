@@ -20,6 +20,12 @@ namespace HairSalon
       return View();
     }
 
+    public ActionResult Details(int id)
+    {
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      return View(thisStylist);
+    }
+
     public ActionResult Index()
     {
       List<Stylist> model = _db.Stylists.OrderBy(stylist => stylist.Name).ToList();
