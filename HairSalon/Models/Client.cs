@@ -13,6 +13,8 @@ namespace HairSalon.Models
     public virtual Stylist Stylist { get; set; }
 
     public Color HairColor { get; set; }
+
+    public PreferredStyling Styling { get; set; }
   }
 
   public enum Color
@@ -21,5 +23,16 @@ namespace HairSalon.Models
     blond,
     brown,
     red
+  }
+
+  public enum PreferredStyling
+  {
+    color,
+    curl,
+    cut,
+    extensions,
+    perm,
+    straighten,
+    weave
   }
 }
