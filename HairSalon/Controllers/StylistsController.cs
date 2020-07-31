@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HairSalon
+namespace HairSalon.Controllers
 {
   public class StylistsController : Controller
   {
