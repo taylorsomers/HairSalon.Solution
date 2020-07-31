@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+@using HairSalon.Models
+
+<h1>Add a New Client:</h1>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.ClientName)
+  @Html.TextBoxFor(model => model.ClientName, new { @class = "form-control" })
+
+  @Html.LabelFor(model => model.HairColor)
+  @Html.DropDownList("HairColor",
+    new SelectList(Enum.GetValues(typeof(Color))),
+    new { @class = "form-control" })
+}
