@@ -33,7 +33,7 @@ namespace HairSalon
     }
 
     [HttpPost]
-    public ActionResult Create(Sylist stylist)
+    public ActionResult Create(Stylist stylist)
     {
       _db.Stylists.Add(stylist);
       _db.SaveChanges();
