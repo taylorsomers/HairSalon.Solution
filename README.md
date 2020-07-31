@@ -49,9 +49,9 @@
 
 ## Known Bugs
 
-| Bug Message |  Situation  | Resolved (Y/N) |  Bug Resolution Strategy |
+| Bug : Message |  Situation  | Resolved (Y/N) |  Bug Resolution Strategy |
 | ----------- | ----------- | ----------- | ----------- |
-|  |  |  |  |
+| ".NETCoreApp,Version=v2.2.AssemblyAttributes.cs HairSalon\obj\Debug\netcoreapp2.2" : "Duplicate 'global::System.Runtime.Versioning.TargetFrameworkAttribute' attribute [HairSalon] csharp(CS0579) | Displayed when "dotnet build" and "dotnet watch run" commands are initiated. No apparent effect on program functionality. | Y | Add tag "<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>" to "<PropertyGroup>" within "<Project>" in HairSalon/HairSalon.csproj file. |
 
 
 ## Support & Contact Details
