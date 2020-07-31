@@ -20,20 +20,20 @@ namespace HairSalon.Models
 
   public enum Color
   {
-    black,
-    blond,
-    brown,
-    red
+    Black,
+    Blond,
+    Brown,
+    Red
   }
 
   public enum Styling
   {
-    color,
-    curl,
-    cut,
-    extensions,
-    perm,
-    straighten,
-    weave
+    Color,
+    Curl,
+    Cut,
+    Extensions,
+    Perm,
+    Straighten,
+    Weave
   }
 }
