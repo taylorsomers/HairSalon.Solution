@@ -16,17 +16,5 @@
   @Html.DropDownList("HairColor",
     new SelectList(Enum.GetValues(typeof(Color))),
     new { @class = "form-control" })
-
-  @Html.LabelFor(model => model.PreferredStyling)
-  @Html.CheckBox("PreferredStyling[]",
-    new SelectList(Enum.GetValues(typeof(Styling))),
-    new { @class = "form-control" })
-
-  @foreach (Styling styling in Enum.GetValues(typeof(Styling)))
-  {
-    <label>
-      <input name="Styling" asp-for="Styling" type="checkbox" value="@styling" checked="@(Model != null && Model.StylingFlags.HasFlag(styling))" />
-      @styling
-    </label>
   }
 }
