@@ -10,6 +10,8 @@ namespace HairSalon.Models
 
     public int StylistId { get; set; }
 
+    public virtual Stylist Stylist { get; set; }
+
     public Color HairColor { get; set; }
   }
 
