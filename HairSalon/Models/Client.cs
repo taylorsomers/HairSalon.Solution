@@ -14,7 +14,7 @@ namespace HairSalon.Models
 
     public Color HairColor { get; set; }
 
-    public PreferredStyling Styling { get; set; }
+    public Styling PreferredStyling { get; set; }
   }
 
   public enum Color
@@ -25,7 +25,7 @@ namespace HairSalon.Models
     red
   }
 
-  public enum PreferredStyling
+  public enum Styling
   {
     color,
     curl,
