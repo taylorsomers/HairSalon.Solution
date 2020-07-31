@@ -66,4 +66,4 @@
 
 ### License
 
-  * This program is free to use under the GNU General Public License GPLv3. (C) 2020 Taylor Somers. All rights reserved.
+  * This program is free to use under the GNU General Public License GPLv3. © 2020 Taylor Somers. All rights reserved.
