@@ -12,6 +12,7 @@ namespace HairSalon.Models
 
     public virtual Stylist Stylist { get; set; }
 
+    [DisplayName("Hair Color")]
     public Color HairColor { get; set; }
 
     public Styling PreferredStyling { get; set; }
