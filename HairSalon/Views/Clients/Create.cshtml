@@ -16,5 +16,9 @@
   @Html.DropDownList("HairColor",
     new SelectList(Enum.GetValues(typeof(Color))),
     new { @class = "form-control" })
-  }
+  
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+
+  <input type="submit" value="Add New Client" class="btn btn-outline-dark" />
 }
