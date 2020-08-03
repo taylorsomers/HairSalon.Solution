@@ -58,6 +58,7 @@
 | Models\Stylist.cs : "error CS0246: The type or namespace name 'DisplayNameAttribute' could not be found (are you missing a using directive or an assembly reference?)" | Build error causing total failure of pages to render | Y | Add using directive "System.ComponentModel" to HairSalon/Models/Stylist.cs file. |
 | Create.cshtml : "No overload for method 'CheckBoxFor' takes 3 arguments [HairSalon] csharp(CS1501)" | Problem affecting construction of new client form | Y | Add "[Flags]" to public enum "Styling" and add sequential power-of-two numerical values to options for public enum "Styling" in HairSalon/Models/Client.cs file. |
 | Create.cshtml : "Argument 2: cannot convert from 'Microsoft.AspNetCore.Mvc.Rendering.SelectList' to 'bool?' [HairSalon] csharp(CS1503)" | Error in constructing text box for client preferred hair styling in new client form | Y | Eliminate all code relating to "PreferredStyling" property of "Client" class and all related UI code in views. |
+| N/A : N/A | "Details" view for Stylists does not display the list of Clients associated with that Stylist. | Y | Add the following code "Stylist thisStylist = _db.Stylists .Include(stylist => stylist.Clients .FirstOrDefault(stylist => stylist.StylistId == id); return View(thisStylist)" to Details HTTPGet action in Stylist Controller. |
 
 
 ## Support & Contact Details
