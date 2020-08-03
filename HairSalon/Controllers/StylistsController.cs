@@ -21,12 +21,6 @@ namespace HairSalon.Controllers
       return View();
     }
 
-    // public ActionResult Details(int id)
-    // {
-    //   Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-    //   return View(thisStylist);
-    // }
-
     public ActionResult Details(int id)
     {
       Stylist thisStylist = _db.Stylists
