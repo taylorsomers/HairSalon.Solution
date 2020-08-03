@@ -12,7 +12,7 @@ namespace HairSalon.Models
 
     public int StylistId { get; set; }
 
-    [DisplayName("Stylist Name: ")]
+    [DisplayName("Stylist Name")]
     public string StylistName { get; set; }
 
     public virtual ICollection<Client> Clients { get; set; }
