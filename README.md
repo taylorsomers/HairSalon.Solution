@@ -4,21 +4,27 @@
 
 ## Description
 
-  
+  This program is a demonstration of one-to-many MySql database relationships created using C# and CSHTML in a .NET Core and MVC environment, and fully integrated with a MySQL schema. It's purpose is to create a user-friendly tracking system for a hair salon owner to organize the stylists they employ and keep track of the list of clients and which clients are associated with each stylists. Each stylist may be associated with many clients, but each client is associated with only one stylist, hence the one-to-many database relationship. While simple and not yet fully built out with all the possibly useful functionality, the essential features of C# and .NET development using databases are present and easily usable.
 
 
 ## Languages & Technologies Used:
 
-  ### Programming Languages & Libraries
+  ### Programming Languages, Libraries, & Frameworks
   * CSHTML
+  * CSS
   * C#
+  * Entity Framework
+  * MVC
+  * MySQL
+  * .NET Core
+  * Razor
 
   ### Operating Systems & Programs
   * Brave
   * Microsoft PowerShell
   * Microsoft Windows 10
+  * MySQL Workbench
   * Visual Studio Code
-  * .NET Core
 
 ## Installation
 
@@ -33,18 +39,47 @@
   9.  Enter the command "dotnet build" in the terminal.
   10. Enter the command "dotnet run" in the terminal. The program should begin to run in the console.
 
+  ### Database Setup Instructions
+
+  DROP DATABASE IF EXISTS `Taylor_Somers`;
+  CREATE DATABASE `Taylor_Somers`;
+
+  USE `Taylor_Somers`;
+
+  CREATE TABLE `clients` (
+    `ClientId` int NOT NULL AUTO_INCREMENT,
+    `StylistId` int DEFAULT NULL,
+    `ClientName` varchar(255) DEFAULT NULL,
+    `HairColor` int DEFAULT NULL,
+    PRIMARY KEY (`ClientId`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+  CREATE TABLE `stylists` (
+    `StylistId` int NOT NULL AUTO_INCREMENT,
+    `StylistName` varchar(255) DEFAULT NULL,
+    PRIMARY KEY (`StylistId`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 ## Specifications
 
   | Program Behavior | Example Behavior | Example Output | Met? (Y/N) |
   | ----------- | ----------- | ----------- | ----------- |
-  |  |  |  |  |
+  | Program will display a splash page with the option to see the a list of stylists and a list of clients. | N/A | N/A | Y |
+  | Program will display a Stylists/Index view with a list of all stylists who have been added into the system when the "List of Stylists" link is clicked. | "List of Stylists" > *Click* | "Stylists: Christine Gontarek, Dirk Funk, Lloyd Wabbit" | Y |
+  | Program will display a Clients/Index view with a list of all clients who have been added into the system, as well as their associated stylists, when the "List of Clients" link is clicked. | "List of Clients" > *Click* | "Clients: Terence Maddock | Dirk Funk, Happy George | Christine Gontarek" | Y |
+  | Program will display a Stylists/Details view with the stylist's name and a list of all clients assigned to that stylist when the associated link is clicked on the Stylists Index view. | "Christine Gontarek" > *Click* | "Stylist Details: Stylist Name: Christine Gontarek; Client: Happy George" | Y |
+  | Program will display a Stylists/Create view with a form to add a new stylist when the associated link is clicked on the Stylists/Index view. | "Add New Stylist" > *Click* | "Add a New Stylist:
+Stylist Name: [Input Field]; [Button: Add New Stylist]" | Y |
+  | Program will return user to the Stylists/Index view with the new stylist's name appended to the list of stylists already entered into the system when the "Add New Stylist" button in the Stylists/Create view is clicked. | "Add a New Stylist: Stylist Name: [Clarence]; [Button: Add New Stylist]" > *Click* | "Stylists: Christine Gontarek, Clarence, Dirk Funk, Lloyd Wabbit" | Y |
+  | Program will display a Clients/Create view with a form to input a new client's name and dropdown lists to select hair color and assigned stylist when the "Add New Client" link on the Stylists/Index or Stylists/Details view is clicked. | "Add New Client" > *Click* | "Add a New Client: Client Name: [Input Field]; Hair Color: [Dropdown List]; Stylist: [Dropdown List]; [Button: Add New Client]" | Y |
+  | Program will display Clients/Index view with the newly added client and their associated stylist appended to the list when the new client entry form on the Clients/Create view is submitted. | "Add a New Client: Client Name: [Haggith Wigglesworth]; Hair Color: [Brown]; Stylist: [Dirk Funk]; [Button: Add New Client]" > *Click* | Client List: Terence Maddock | Dirk Funk, Happy George | Christine Gontarek, Haggith Wigglesworth | Dirk Funk" | Y |
 
 
 ## Stretch Goals
 | Behavior | Input | Output | Met? (Y/N) |
 | ----------- | ----------- | ----------- | ----------- |
-|  |  |  |  |
+| Program will allow user to assign specific hair treatments for clients using checkboxes. | "Color: *Check*; Curl: *Check*; Cut: *Check*" | "[Client Name], Preferred Treatment: Color, Curl, Cut" | N |
 
 
 ## Known Bugs
