@@ -97,7 +97,7 @@
 
 ## Support & Contact Details
 
-  * You are welcome to contact the author(s) via GitHub (taylorsomers) with any concerns, feedback, possible contributions, questions, or suggestions.
+  * You are welcome to contact the [author](https://github.com/taylorsomers/) via GitHub with any concerns, feedback, possible contributions, questions, or suggestions.
 
 
 ### Contributors
