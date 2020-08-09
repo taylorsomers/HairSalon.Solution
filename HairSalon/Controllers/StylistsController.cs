@@ -16,23 +16,15 @@ namespace HairSalon.Controllers
       _db = db;
     }
 
-    public ActionResult Create()
-    {
-      return View();
-    }
-
-    public ActionResult Details(int id)
-    {
-      Stylist thisStylist = _db.Stylists
-        .Include(stylist => stylist.Clients)
-        .FirstOrDefault(stylist => stylist.StylistId == id);
-      return View(thisStylist);
-    }
-
     public ActionResult Index()
     {
       List<Stylist> model = _db.Stylists.OrderBy(stylist => stylist.StylistName).ToList();
       return View(model);
+    }
+
+    public ActionResult Create()
+    {
+      return View();
     }
 
     [HttpPost]
@@ -41,6 +33,14 @@ namespace HairSalon.Controllers
       _db.Stylists.Add(stylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+
+    public ActionResult Details(int id)
+    {
+      Stylist thisStylist = _db.Stylists
+        .Include(stylist => stylist.Clients)
+        .FirstOrDefault(stylist => stylist.StylistId == id);
+      return View(thisStylist);
     }
   }
 }
