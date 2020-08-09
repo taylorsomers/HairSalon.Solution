@@ -35,9 +35,10 @@
   5.  Use a file extractor or unzip program (such as PeaZip, Unzipper, WinZip, Zipware, or 7-ZIP) to extract the ZIP files onto your computer.
   6.  In your browser, navigate to https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.106-macos-x64-installer for Mac or https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.203-windows-x64-installer for Windows and click the link "click here to download manually" if the download for .NET Core 2.2 SDK does not start automatically.
   7.  Double-click the downloaded .NET Core 2.2 SDK file and run the installer.
-  8.  Open your computer's terminal and navigate to the directory bearing the name of the program and containing the top level subdirectories and files.
-  9.  Enter the command "dotnet build" in the terminal.
-  10. Enter the command "dotnet run" in the terminal. The program should begin to run in the console.
+  8.  Open your computer's terminal and navigate to the "HairSalon" subdirectory within the "HairSalon.Solution" directory.
+  9.  Import the file "taylor_somers.sql" using your preferred SQL management tool.
+  10.  Enter the command "dotnet build" in the terminal.
+  11. Enter the command "dotnet run" in the terminal. The program should begin to run in your browser.
 
   ### Database Setup Instructions
 
